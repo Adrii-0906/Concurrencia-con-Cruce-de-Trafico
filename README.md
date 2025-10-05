@@ -57,10 +57,3 @@ Las siguientes rutas son las que pueden generar interbloqueo en un sistema sin c
 | :--- | :--- | :--- |
 | **Norte $\rightarrow$ Sur** | Q1, Q4 | $Q_1 \rightarrow Q_4$ |
 | **Oeste $\rightarrow$ Este** | Q4, Q1 | $Q_4 \rightarrow Q_1$ |
-
-### Ejecución
-
-Para iniciar la simulación y observar cómo las técnicas de prevención garantizan un flujo de tráfico seguro:
-
-```bash
-python main.py
