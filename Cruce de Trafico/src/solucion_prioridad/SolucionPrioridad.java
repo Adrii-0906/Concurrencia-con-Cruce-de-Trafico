@@ -23,8 +23,18 @@ public class SolucionPrioridad {
         cocheC.start();
         cocheD.start();
 
+        // Espera a que cada hilo termine, por si hay alguna excepción
+        try {
+            cocheA.join();
+            cocheB.join();
+            cocheC.join();
+            cocheD.join();
+        }
+        catch (InterruptedException e){
+            e.printStackTrace();
+        }
         // Si no salta ninguna excepcion salta el mensaje de que todo ha funcionado correctamente
-        System.out.println("Los coches han cruzado correctamente");
+        System.out.println("\nLos coches han cruzado correctamente");
     }
 }
 

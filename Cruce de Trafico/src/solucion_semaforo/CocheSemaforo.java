@@ -1,15 +1,13 @@
 package solucion_semaforo;
 
 
-public class CocheSemaforo extends Thread {
-    private Object cuadrante1, cuadrante2;
-    private int numC1, numC2;
-    private GestorSemaforo gestor;
+public class CocheSemaforo extends Thread { // Extendemos de Thread, cada coche es un Hilo
+    private int numC1, numC2; // Números para trabajar
+    private GestorSemaforo gestor; // Necesitamos un objecto tipo GestorSemaforo
 
-    public CocheSemaforo(Object c1, int n1, Object c2, int n2, String nombre, GestorSemaforo gestor) {
-        this.cuadrante1 = c1;
+    // Creamos un constructor con toodas los parámetros, además del nombre del hilo/coche
+    public CocheSemaforo(int n1, int n2, String nombre, GestorSemaforo gestor) {
         this.numC1 = n1;
-        this.cuadrante2 = c2;
         this.numC2 = n2;
         this.setName(nombre);
         this.gestor = gestor;
@@ -17,17 +15,12 @@ public class CocheSemaforo extends Thread {
 
     @Override
     public void run() {
-        synchronized (cuadrante1) {
-            synchronized (cuadrante2) {
-                gestor.entrar(numC1, numC2, getName());
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                gestor.salir(numC1, numC2, getName());
-            }
+        gestor.entrar(numC1, numC2, this.getName()); // En el gestor, se comprueba si es posible entrar, entramos o esperamos
+        try {
+            Thread.sleep(1000); // Dejamos tiempo para simular el curce
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
+        gestor.salir(numC1, numC2, this.getName()); // Salimos dejando los cuadrantes libres de nuevo
     }
-
 }
