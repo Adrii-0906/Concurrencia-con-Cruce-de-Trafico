@@ -29,6 +29,7 @@
   "keyToString": {
     "Application.SimulacionDeadLock.executor": "Run",
     "Application.SolucionPrioridad.executor": "Run",
+    "Application.SolucionSemaforo.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
