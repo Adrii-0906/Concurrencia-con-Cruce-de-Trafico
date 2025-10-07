@@ -84,3 +84,5 @@ El proyecto está escrito en **Java** y utiliza las herramientas de concurrencia
 Para una explicación más detallada sobre los conceptos, la metodología de resolución y las conclusiones del proyecto, consulte el documento completo:
 
 [**Documentación Proyecto de Concurrencia**](https://docs.google.com/document/d/1EI47z6HOt3_Zy2Zg9NH6bYBkTg_qSvm5SEGb7ab-JHM/edit?usp=sharing)
+<br>
+[**Enlace a la Presentación en Canva**](https://www.canva.com/design/DAG1DWd6dcU/NHD93skmvQNbrrj9TnZ3_w/edit?utm_content=DAG1DWd6dcU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
